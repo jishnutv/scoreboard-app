@@ -1,0 +1,51 @@
+<ion-content [fullscreen]="true">
+  <ion-grid [ngStyle]="{'background-image' : 'url(' + mainBg + ')'}">
+    <div class="overlay" [style.background-image]="overlay.backgroundImage"></div>
+    <ion-row>
+      <ion-col class="set">
+        <div class="item">
+          <div class="bg">
+            <span class="l"></span>
+            <span class="r"></span>
+          </div>
+          <h1>{{ setInfo.setName }}</h1>
+        </div>
+      </ion-col>
+      <ion-col size="12" class="header">
+        <div class="items">
+          <div class="team a">
+            <h1>{{ setInfo.teama }}</h1>
+          </div>
+          <div class="logo"></div>
+          <div class="team b">
+            <h1>{{ setInfo.teamb }}</h1>
+          </div>
+        </div>
+      </ion-col>
+      <ion-col size="12" class="score">
+        <div class="s-wrapper">
+          <div class="a">
+            <h1>{{ score.scoreA }}</h1>
+          </div>
+          <div class="b">
+            <h1>{{ score.scoreB }}</h1>
+          </div>
+        </div>
+      </ion-col>
+      <ion-col class="next">
+        <h1>Next Match</h1>
+        <div class="item">
+          <div class="items">
+            <div class="team a">
+              <h1>{{ setInfo.teamNexta }}</h1>
+            </div>
+            <div class="logo"></div>
+            <div class="team b">
+              <h1>{{ setInfo.teamNextb }}</h1>
+            </div>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">dashboard</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="goto('scoreboard')">Score board</ion-button>
+        <ion-button (click)="goto('manage')">Videos</ion-button>
+        <ion-button (click)="goto('match-set')">Set List</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

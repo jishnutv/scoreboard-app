@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Set Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Set Details</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      @if (setInfo) {
+      <ion-col size-lg="3" size-md="4" size="12">
+        <ion-card>
+          <ion-card-header color="primary">
+            <ion-card-title>{{ setInfo.setName }}</ion-card-title>
+            <ion-card-subtitle style="margin-bottom: 1rem;">{{setInfo.teama}} <span
+                style="font-weight: bold; color: black">X</span> {{setInfo.teamb}}</ion-card-subtitle>
+              <ion-button (click)="sendSet()" color="light">Send to score board</ion-button>
+          </ion-card-header>
+          <ion-card-content>
+            <div class="score ion-padding">
+              <div class="a">
+                <ion-button (click)="addScore('a')" size="small">+</ion-button>
+                <h4>{{scoreA}}</h4>
+                <ion-button (click)="minusScore('a')" size="small">-</ion-button>
+              </div>
+              <div class="b">
+                <ion-button (click)="addScore('b')" size="small">+</ion-button>
+                <h4>{{scoreB}}</h4>
+                <ion-button (click)="minusScore('b')" size="small">-</ion-button>
+              </div>
+            </div>
+          </ion-card-content>
+          <ion-card-header color="warning">
+            <ion-card-title>Next</ion-card-title>
+            <ion-card-subtitle>{{setInfo.teamNexta}} <span style="font-weight: bold; color: black">X</span>
+              T{{setInfo.teamNextb}}</ion-card-subtitle>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      }
+    </ion-row>
+  </ion-grid>
+</ion-content>
