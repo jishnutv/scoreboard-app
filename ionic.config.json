@@ -1,0 +1,7 @@
+{
+  "name": "mygamescore-web",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
